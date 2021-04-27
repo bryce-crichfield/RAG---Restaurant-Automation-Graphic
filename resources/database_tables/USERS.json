@@ -1,0 +1,62 @@
+[
+    {
+        "userid": 1,
+        "user_type": "manager",
+        "username": "manager1",
+        "password": "1234",
+        "firstname": "John",
+        "lastname": "Brown",
+        "address": "123 Oak Street",
+        "zipcode": 10012
+    },
+    {
+        "userid": 2,
+        "user_type": "waiter",
+        "username": "waiter1",
+        "password": "1234",
+        "firstname": "Alice",
+        "lastname": "Smith",
+        "address": "234 Pine Road",
+        "zipcode": 10012
+    },
+    {
+        "userid": 3,
+        "user_type": "cook",
+        "username": "cook1",
+        "password": "1234",
+        "firstname": "David",
+        "lastname": "Jones",
+        "address": "345 Washington Street",
+        "zipcode": 10012
+    },
+    {
+        "userid": 4,
+        "user_type": "busboy",
+        "username": "busboy1",
+        "password": "1234",
+        "firstname": "Michael",
+        "lastname": "Williams",
+        "address": "456 Lake Drive",
+        "zipcode": 10012
+    },
+    {
+        "userid": 5,
+        "user_type": "host",
+        "username": "host1",
+        "password": "1234",
+        "firstname": "Mary ",
+        "lastname": "Johnson",
+        "address": "567 Hill Lane",
+        "zipcode": 10012
+    },
+    {
+        "userid": 6,
+        "user_type": "manager",
+        "username": "",
+        "password": "0",
+        "firstname": "",
+        "lastname": "",
+        "address": "",
+        "zipcode": 0
+    }
+]
