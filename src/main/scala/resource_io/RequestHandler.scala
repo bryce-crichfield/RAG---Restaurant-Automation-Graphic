@@ -4,6 +4,10 @@ package resource_io
 import user.User
 
 import argonaut.{Json, Parse}
+import org.eleven.entities.Item
+
+import scala.io.Source
+import scala.util.Using
 
 object RequestHandler {
 
@@ -21,12 +25,22 @@ object RequestHandler {
         None
     }
 
+    def load_menu: Option[List[Item]] = {
+        val table = load_database("MENU_ITEMS")
+        if(table.isEmpty)  None
+        else {
+            val received = table.get
+            val decoded = Parse.decodeOption[List[Item]](received.toString())
+            if(decoded.nonEmpty) decoded
+            else None
+        }
+    }
 
     def load_database(db_name: String): Option[Json] = {
-        val resource = getClass.getResource(s"/database_tables/$db_name.json")
-        val source = scala.io.Source.fromFile(resource.toURI).mkString
-        val parsed: Option[Json] = Parse.parseOption(source)
-        parsed
+        val resource = getClass.getResource(s"/database_tables/$db_name.json").toURI
+        val source = Using(Source.fromFile(resource)) {_.mkString}
+        if(source.isSuccess) Parse.parseOption(source.get)
+        else None
     }
 
 }

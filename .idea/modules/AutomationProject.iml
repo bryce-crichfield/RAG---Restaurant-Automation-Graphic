@@ -9,9 +9,11 @@
       <sourceFolder url="file://$MODULE_DIR$/../../src/main/scala" isTestSource="false" packagePrefix="org.eleven" />
       <sourceFolder url="file://$MODULE_DIR$/../../src/test/scala" isTestSource="true" packagePrefix="org.eleven" />
       <excludeFolder url="file://$MODULE_DIR$/../../target" />
+      <excludeFolder url="file://$MODULE_DIR$/../../resources/sfx_layouts/exc" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="sbt: com.jfoenix:jfoenix:9.0.10:jar" level="project" />
     <orderEntry type="library" name="sbt: de.jensd:fontawesomefx-commons:9.1.2:jar" level="project" />
     <orderEntry type="library" name="sbt: de.jensd:fontawesomefx-fontawesome:4.7.0-9.1.2:jar" level="project" />
     <orderEntry type="library" name="sbt: io.argonaut:argonaut_2.13:6.3.3:jar" level="project" />

@@ -17,11 +17,11 @@ class LoginController extends Controller {
 
     def loginButtonClicked: Unit = {
         if(validateInput == false) return
-        val new_root = load_scene("home_scene_layout").parent
+        val new_root = load_scene("main_floor_layout").parent
         val new_scene = new Scene()
         new_scene.setRoot(new_root)
         stage.setScene(new_scene)
-        stage.setTitle("home_scene_layout")
+        stage.setTitle("main_floor_layout")
     }
 
     //can be used to also set current user

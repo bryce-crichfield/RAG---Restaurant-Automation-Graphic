@@ -10,7 +10,8 @@ idePackagePrefix := Some("org.eleven")
 val argonaut = "io.argonaut" %% "argonaut" % "6.3.3"
 val ScalaFX = "org.scalafx" %% "scalafx" % "16.0.0-R22"
 val FontAwesomeFX = "de.jensd" % "fontawesomefx-fontawesome" % "4.7.0-9.1.2"
-libraryDependencies ++= Seq(argonaut, ScalaFX, FontAwesomeFX)
+val JFoenix = "com.jfoenix" % "jfoenix" % "9.0.10"
+libraryDependencies ++= Seq(argonaut, ScalaFX, FontAwesomeFX, JFoenix)
 
 //Determine OS Version of JFX Binaries
 lazy val OS_Name = System.getProperty("os.name") match {
