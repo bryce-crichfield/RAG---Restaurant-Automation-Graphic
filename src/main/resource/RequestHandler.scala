@@ -1,10 +1,10 @@
 package org.eleven
-package resource_io
+package resource
 
+import entities.Item
 import user.User
 
 import argonaut.{Json, Parse}
-import org.eleven.entities.Item
 
 import scala.io.Source
 import scala.util.Using

@@ -1,7 +1,7 @@
 package org.eleven
 package entities
 
-import org.eleven.resource_io.RequestHandler.load_menu
+import resource.RequestHandler.load_menu
 
 object Menu {
 

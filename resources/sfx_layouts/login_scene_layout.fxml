@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.eleven.controllers.LoginController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.eleven.controllers.LoginSceneController">
    <left>
       <AnchorPane prefWidth="400.0" style="-fx-background-color: #3366FF;" BorderPane.alignment="CENTER">
          <children>
@@ -127,11 +127,7 @@
                         <Insets left="20.0" />
                      </padding>
                   </VBox>
-                  <Button mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
-                     <graphic>
-                        <FontAwesomeIconView fill="#3366ff" glyphName="CLOSE" size="16" />
-                     </graphic>
-                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP" />
                </children>
             </GridPane>
          </children>

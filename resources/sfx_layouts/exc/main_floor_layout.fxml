@@ -11,35 +11,15 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
-   <top>
-      <MenuBar prefHeight="20.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-   </top>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.eleven.controllers.MainSceneController">
    <center>
       <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
-          <Tab text="Untitled Tab 1">
+          <Tab text="Floor View">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -66,15 +46,15 @@
                                 </rowConstraints>
                                  <children>
                                      <!--Region Grid 1-->
-                                    <Region fx:id="t_grid_g1_r1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                    <Region fx:id="t_grid_g1_r2" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" />
-                                    <Region fx:id="t_grid_g1_r3" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.rowIndex="1" />
-                                    <Region fx:id="t_grid_g1_r4" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Region fx:id="table_grid_r1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Region fx:id="table_grid_r2" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" />
+                                    <Region fx:id="table_grid_r7" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.rowIndex="1" />
+                                    <Region fx:id="table_grid_r8" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                      <!--Button Grid 1-->
-                                    <Button fx:id="t_grid_g1_b1" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                    <Button fx:id="t_grid_g1_b2" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                    <Button fx:id="t_grid_g1_b3" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                                    <Button fx:id="t_grid_g1_b4" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: 0;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                    <Button fx:id="table_grid_b1" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Button fx:id="table_grid_b2" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Button fx:id="table_grid_b7" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                    <Button fx:id="table_grid_b8" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: 0;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                  </children>
                               </GridPane>
                               <GridPane layoutX="210.0" layoutY="111.0" GridPane.columnIndex="1">
@@ -88,15 +68,15 @@
                                  </rowConstraints>
                                  <children>
                                      <!--Region Grid 1-->
-                                     <Region fx:id="t_grid_g2_r1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                     <Region fx:id="t_grid_g2_r2" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" />
-                                     <Region fx:id="t_grid_g2_r3" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.rowIndex="1" />
-                                     <Region fx:id="t_grid_g2_r4" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                     <Region fx:id="table_grid_r3" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                     <Region fx:id="table_grid_r4" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" />
+                                     <Region fx:id="table_grid_r9" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.rowIndex="1" />
+                                     <Region fx:id="table_grid_r10" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                      <!--Button Grid 1-->
-                                     <Button fx:id="t_grid_g2_b1" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                     <Button fx:id="t_grid_g2_b2" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                     <Button fx:id="t_grid_g2_b3" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                                     <Button fx:id="t_grid_g2_b4" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: 0;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                     <Button fx:id="table_grid_b3" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                     <Button fx:id="table_grid_b4" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                     <Button fx:id="table_grid_b9" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                     <Button fx:id="table_grid_10" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: 0;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                  </children>
                               </GridPane>
                               <GridPane layoutX="410.0" layoutY="111.0" GridPane.columnIndex="2">
@@ -110,15 +90,15 @@
                                  </rowConstraints>
                                   <children>
                                       <!--Region Grid 1-->
-                                      <Region fx:id="t_grid_g3_r1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                      <Region fx:id="t_grid_g3_r2" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" />
-                                      <Region fx:id="t_grid_g3_r3" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.rowIndex="1" />
-                                      <Region fx:id="t_grid_g3_r4" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                      <Region fx:id="table_grid_r5" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                      <Region fx:id="table_grid_r6" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" />
+                                      <Region fx:id="table_grid_r11" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.rowIndex="1" />
+                                      <Region fx:id="table_grid_r12" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                       <!--Button Grid 1-->
-                                      <Button fx:id="t_grid_g3_b1" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                      <Button fx:id="t_grid_g3_b2" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                      <Button fx:id="t_grid_g3_b3" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                                      <Button fx:id="t_grid_g3_b4" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: 0;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b5" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b6" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b11" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b12" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: 0;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                   </children>
                               </GridPane>
                               <GridPane layoutX="210.0" layoutY="111.0" GridPane.rowIndex="1">
@@ -132,15 +112,15 @@
                                  </rowConstraints>
                                   <children>
                                       <!--Region Grid 1-->
-                                      <Region fx:id="t_grid_g4_r1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                      <Region fx:id="t_grid_g4_r2" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" />
-                                      <Region fx:id="t_grid_g4_r3" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.rowIndex="1" />
-                                      <Region fx:id="t_grid_g4_r4" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                      <Region fx:id="table_grid_r13" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                      <Region fx:id="table_grid_r14" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" />
+                                      <Region fx:id="table_grid_r19" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.rowIndex="1" />
+                                      <Region fx:id="table_grid_r20" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                       <!--Button Grid 1-->
-                                      <Button fx:id="t_grid_g4_b1" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                      <Button fx:id="t_grid_g4_b2" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                      <Button fx:id="t_grid_g4_b3" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                                      <Button fx:id="t_grid_g4_b4" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: 0;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b13" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b14" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b19" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b20" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: 0;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                   </children>
                               </GridPane>
                               <GridPane layoutX="410.0" layoutY="111.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -154,15 +134,15 @@
                                  </rowConstraints>
                                   <children>
                                       <!--Region Grid 1-->
-                                      <Region fx:id="t_grid_g5_r1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                      <Region fx:id="t_grid_g5_r2" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" />
-                                      <Region fx:id="t_grid_g5_r3" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.rowIndex="1" />
-                                      <Region fx:id="t_grid_g5_r4" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                      <Region fx:id="table_grid_r15" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                      <Region fx:id="table_grid_r16" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" />
+                                      <Region fx:id="table_grid_r21" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.rowIndex="1" />
+                                      <Region fx:id="table_grid_r22" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                       <!--Button Grid 1-->
-                                      <Button fx:id="t_grid_g5_b1" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                      <Button fx:id="t_grid_g5_b2" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                      <Button fx:id="t_grid_g5_b3" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                                      <Button fx:id="t_grid_g5_b4" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: 0;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b15" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b16" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b21" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b22" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: 0;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                   </children>
                               </GridPane>
                               <GridPane layoutX="610.0" layoutY="111.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
@@ -176,15 +156,15 @@
                                  </rowConstraints>
                                   <children>
                                       <!--Region Grid 1-->
-                                      <Region fx:id="t_grid_g6_r1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                      <Region fx:id="t_grid_g6_r2" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" />
-                                      <Region fx:id="t_grid_g6_r3" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.rowIndex="1" />
-                                      <Region fx:id="t_grid_g6_r4" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                      <Region fx:id="table_grid_r17" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                      <Region fx:id="table_grid_r18" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" />
+                                      <Region fx:id="table_grid_r23" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.rowIndex="1" />
+                                      <Region fx:id="table_grid_r24" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                       <!--Button Grid 1-->
-                                      <Button fx:id="t_grid_g6_b1" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                      <Button fx:id="t_grid_g6_b2" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                      <Button fx:id="t_grid_g6_b3" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                                      <Button fx:id="t_grid_g6_b4" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: 0;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b17" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b18" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b23" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b24" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: 0;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                   </children>
                               </GridPane>
                               <GridPane layoutX="210.0" layoutY="212.0" GridPane.rowIndex="2">
@@ -198,15 +178,15 @@
                                  </rowConstraints>
                                   <children>
                                       <!--Region Grid 1-->
-                                      <Region fx:id="t_grid_g7_r1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                      <Region fx:id="t_grid_g7_r2" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" />
-                                      <Region fx:id="t_grid_g7_r3" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.rowIndex="1" />
-                                      <Region fx:id="t_grid_g7_r4" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                      <Region fx:id="table_grid_r25" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                      <Region fx:id="table_grid_r26" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" />
+                                      <Region fx:id="table_grid_r31" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.rowIndex="1" />
+                                      <Region fx:id="table_grid_r32" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                       <!--Button Grid 1-->
-                                      <Button fx:id="t_grid_g7_b1" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                      <Button fx:id="t_grid_g7_b2" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                      <Button fx:id="t_grid_g7_b3" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                                      <Button fx:id="t_grid_g7_b4" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: 0;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b25" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b26" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b31" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b32" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: 0;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                   </children>
                               </GridPane>
                               <GridPane layoutX="410.0" layoutY="212.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -220,15 +200,15 @@
                                  </rowConstraints>
                                   <children>
                                       <!--Region Grid 1-->
-                                      <Region fx:id="t_grid_g8_r1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                      <Region fx:id="t_grid_g8_r2" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" />
-                                      <Region fx:id="t_grid_g8_r3" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.rowIndex="1" />
-                                      <Region fx:id="t_grid_g8_r4" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                      <Region fx:id="table_grid_r27" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                      <Region fx:id="table_grid_r28" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" />
+                                      <Region fx:id="table_grid_r33" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.rowIndex="1" />
+                                      <Region fx:id="table_grid_r34" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                       <!--Button Grid 1-->
-                                      <Button fx:id="t_grid_g8_b1" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                      <Button fx:id="t_grid_g8_b2" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                      <Button fx:id="t_grid_g8_b3" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                                      <Button fx:id="t_grid_g8_b4" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: 0;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b27" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b28" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b33" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b34" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: 0;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                   </children>
                               </GridPane>
                               <GridPane layoutX="610.0" layoutY="212.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
@@ -242,15 +222,15 @@
                                  </rowConstraints>
                                   <children>
                                       <!--Region Grid 1-->
-                                      <Region fx:id="t_grid_g9_r1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                      <Region fx:id="t_grid_g9_r2" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" />
-                                      <Region fx:id="t_grid_g9_r3" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.rowIndex="1" />
-                                      <Region fx:id="t_grid_g9_r4" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                      <!--Button Grid 1-->
-                                      <Button fx:id="t_grid_g9_b1" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                      <Button fx:id="t_grid_g9_b2" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                                      <Button fx:id="t_grid_g9_b3" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                                      <Button fx:id="t_grid_g9_b4" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" style="-fx-background-radius: 0; -fx-background-color: 0;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                      <Region fx:id="table_grid_r29" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                      <Region fx:id="table_grid_r30" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" />
+                                      <Region fx:id="table_grid_r35" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.rowIndex="1" />
+                                      <Region fx:id="table_grid_r36" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3366FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                      <!--Button Grid 1-->   
+                                      <Button fx:id="table_grid_b29" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b30" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b35" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: transparent;" text="Table" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                      <Button fx:id="table_grid_b36" maxHeight="200.0" maxWidth="200.0" mnemonicParsing="false" onAction="#onButtonClick" style="-fx-background-radius: 0; -fx-background-color: 0;" text="Table" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
                                   </children>
                               </GridPane>
                            </children>
@@ -270,4 +250,40 @@
         </tabs>
       </TabPane>
    </center>
+   <top>
+      <HBox spacing="35.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar style="-fx-background-color: trasnparent;">
+              <menus>
+                <Menu mnemonicParsing="false" text="View">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Region prefWidth="750.0" />
+            <MenuBar prefHeight="27.0" style="-fx-background-color: transparent;">
+              <menus>
+                <Menu mnemonicParsing="false" text="User">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#logOutButtonClicked" text="Log Out" />
+                  </items>
+                </Menu>
+              </menus>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </MenuBar>
+         </children>
+      </HBox>
+   </top>
 </BorderPane>

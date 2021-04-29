@@ -1,13 +1,13 @@
 package org.eleven
 package controllers
 
-import Launcher.stage
-import org.eleven.resource_io.Loaded_Scene.load_scene
-
+import resource.SceneLoader.load_scene
+import resource.RequestHandler._
+import scalafx.Includes._
+import scalafx.scene.Scene
 import javafx.fxml.FXML
 import javafx.scene.control.{PasswordField, TextField}
-import scalafx.scene.Scene
-import org.eleven.resource_io.RequestHandler._
+import javafx.event.ActionEvent
 
 class LoginController extends Controller {
 
@@ -20,7 +20,7 @@ class LoginController extends Controller {
         val new_root = load_scene("main_floor_layout").parent
         val new_scene = new Scene()
         new_scene.setRoot(new_root)
-        stage.setScene(new_scene)
+        Launcher.stage.setScene(new_scene)
         stage.setTitle("main_floor_layout")
     }
 
@@ -32,5 +32,6 @@ class LoginController extends Controller {
         if(valid_user.isDefined) true else false
     }
 
+    def onButtonClick(event: ActionEvent) = println(event.getSource)
 
 }
