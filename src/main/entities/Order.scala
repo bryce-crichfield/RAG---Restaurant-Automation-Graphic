@@ -13,7 +13,7 @@ case class Order(items: List[Item],
                  status: OrderStatus = PLACED)
 {
 
-    val subtotal = items.map(_.price).sum
+    val subtotal = items.map(_.itemPrice.toInt).sum
     def total(tax_rate: Double = 0.07): Double = subtotal + (subtotal*tax_rate)
     def change_status(s: OrderStatus): Order = Order(items, id, tableid, seat_num, s)
 
