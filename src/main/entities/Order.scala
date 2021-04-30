@@ -1,28 +1,36 @@
 package org.eleven
 package entities
 
-import entities.Order.unique_id
 import entities.status.{OrderStatus, PLACED}
 
+import scala.collection.mutable.ListBuffer
+import java.util
+import java.util.UUID
 import scala.util.Random
 
-case class Order(items: List[Item],
-                 id: Int = unique_id,
-                 tableid: Int,
-                 seat_num: Int = 0,
-                 status: OrderStatus = PLACED)
-{
+class Order(private var items: ListBuffer[Item],
+            val tableid: Int,
+            var seat_num: Int = 0,
+            var status: OrderStatus = PLACED)
+    {
 
-    val subtotal = items.map(_.itemPrice.toInt).sum
+    //String representations used to maintain compatibility with JFX TableView
+    val statusString = status.ID
+    val subTotalString = subtotal.toString
+    val totalString = total().toString
+
+    val orderID = Random.between(0,1000000)
+    def subtotal: Double = items.map(_.itemPrice).sum
     def total(tax_rate: Double = 0.07): Double = subtotal + (subtotal*tax_rate)
-    def change_status(s: OrderStatus): Order = Order(items, id, tableid, seat_num, s)
 
+    def addItem(i: Item): Unit = items.append(i)
+    def removeItem(i:Item): Unit = {
+        val list = items.toList.filter(x => x != i)
+        val buffer = new ListBuffer[Item]
+        list.map(x => buffer.append(x))
+        items = buffer
+    }
+    def getItems(): List[Item] = items.toList
 }
 
-object Order {
-
-
-    //Not Really unique, but developing a hash algo and order manager takes more work
-    def unique_id = Random.nextInt()
-}
 

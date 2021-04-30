@@ -1,23 +1,17 @@
 package org.eleven
 package entities
 
-import resource.RequestHandler.load_menu
+import resource.RequestHandler.{load_database, load_menu}
 
 import java.util
 import scala.collection.mutable.ListBuffer
-import scala.collection.JavaConverters.bufferAsJavaListConverter
 import scala.collection.mutable.ArrayBuffer
+import scala.jdk.CollectionConverters.SeqHasAsJava
 
 object Menu {
 
     //No error handling
-    val items = {
-        if(load_menu.isDefined) {
-            load_menu.get.toBuffer.asJava.asInstanceOf[util.ArrayList[Item]]
-        } else {
-           ListBuffer[Item](Item("10000", "PHONY", "sdghdg", "hsdjkg")).asJava
-        }
-    }
+    val items = load_menu.get
 
 
     //No error handling in the case that two items share the same ID, which shouldn't happen but still..

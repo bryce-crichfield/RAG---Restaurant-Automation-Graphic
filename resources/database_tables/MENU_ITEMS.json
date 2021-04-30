@@ -1,638 +1,638 @@
 [
     {
-        "itemid": 1,
-        "name": "Bruschetta",
-        "price": 5.95,
-        "itemtype": "appetizer"
+        "itemID": 1,
+        "itemName": "Bruschetta",
+        "itemPrice": 5.95,
+        "itemType": "appetizer"
     },
     {
-        "itemid": 2,
-        "name": "Caprese Flatbread",
-        "price": 5.95,
-        "itemtype": "appetizer"
+        "itemID": 2,
+        "itemName": "Caprese Flatbread",
+        "itemPrice": 5.95,
+        "itemType": "appetizer"
     },
     {
-        "itemid": 3,
-        "name": "Grilled Chicken Flatbread",
-        "price": 7.25,
-        "itemtype": "appetizer"
+        "itemID": 3,
+        "itemName": "Grilled Chicken Flatbread",
+        "itemPrice": 7.25,
+        "itemType": "appetizer"
     },
     {
-        "itemid": 4,
-        "name": "Mussel di Napoli",
-        "price": 8.75,
-        "itemtype": "appetizer"
+        "itemID": 4,
+        "itemName": "Mussel di Napoli",
+        "itemPrice": 8.75,
+        "itemType": "appetizer"
     },
     {
-        "itemid": 5,
-        "name": "Hot Artichoke-Spinach Dip",
-        "price": 6.95,
-        "itemtype": "appetizer"
+        "itemID": 5,
+        "itemName": "Hot Artichoke-Spinach Dip",
+        "itemPrice": 6.95,
+        "itemType": "appetizer"
     },
     {
-        "itemid": 6,
-        "name": "Lasanga Fitta",
-        "price": 7.5,
-        "itemtype": "appetizer"
+        "itemID": 6,
+        "itemName": "Lasanga Fitta",
+        "itemPrice": 7.5,
+        "itemType": "appetizer"
     },
     {
-        "itemid": 7,
-        "name": "Smoked Mozzerlla Fonduta",
-        "price": 6.95,
-        "itemtype": "appetizer"
+        "itemID": 7,
+        "itemName": "Smoked Mozzerlla Fonduta",
+        "itemPrice": 6.95,
+        "itemType": "appetizer"
     },
     {
-        "itemid": 8,
-        "name": "Dripping Sauces for Breadsticks",
-        "price": 2.95,
-        "itemtype": "appetizer"
+        "itemID": 8,
+        "itemName": "Dripping Sauces for Breadsticks",
+        "itemPrice": 2.95,
+        "itemType": "appetizer"
     },
     {
-        "itemid": 9,
-        "name": "Sicilian Scampi",
-        "price": 9.75,
-        "itemtype": "appetizer"
+        "itemID": 9,
+        "itemName": "Sicilian Scampi",
+        "itemPrice": 9.75,
+        "itemType": "appetizer"
     },
     {
-        "itemid": 10,
-        "name": "Stuffed Mushrooms",
-        "price": 6.25,
-        "itemtype": "appetizer"
+        "itemID": 10,
+        "itemName": "Stuffed Mushrooms",
+        "itemPrice": 6.25,
+        "itemType": "appetizer"
     },
     {
-        "itemid": 11,
-        "name": "Calamari",
-        "price": 7.95,
-        "itemtype": "appetizer"
+        "itemID": 11,
+        "itemName": "Calamari",
+        "itemPrice": 7.95,
+        "itemType": "appetizer"
     },
     {
-        "itemid": 12,
-        "name": "Soup, Salad & Breadsticks",
-        "price": 6.95,
-        "itemtype": "appetizer"
+        "itemID": 12,
+        "itemName": "Soup, Salad & Breadsticks",
+        "itemPrice": 6.95,
+        "itemType": "appetizer"
     },
     {
-        "itemid": 13,
-        "name": "Chicken & Gnocchi",
-        "price": 4.5,
-        "itemtype": "soups/salad"
+        "itemID": 13,
+        "itemName": "Chicken & Gnocchi",
+        "itemPrice": 4.5,
+        "itemType": "soups/salad"
     },
     {
-        "itemid": 14,
-        "name": "Pasta e Fagioli",
-        "price": 4.5,
-        "itemtype": "soups/salad"
+        "itemID": 14,
+        "itemName": "Pasta e Fagioli",
+        "itemPrice": 4.5,
+        "itemType": "soups/salad"
     },
     {
-        "itemid": 15,
-        "name": "Minestrone",
-        "price": 4.5,
-        "itemtype": "soups/salad"
+        "itemID": 15,
+        "itemName": "Minestrone",
+        "itemPrice": 4.5,
+        "itemType": "soups/salad"
     },
     {
-        "itemid": 16,
-        "name": "Zuppa Toscana",
-        "price": 4.5,
-        "itemtype": "soups/salad"
+        "itemID": 16,
+        "itemName": "Zuppa Toscana",
+        "itemPrice": 4.5,
+        "itemType": "soups/salad"
     },
     {
-        "itemid": 17,
-        "name": "Garden-Fresh Salad",
-        "price": 5.25,
-        "itemtype": "soups/salad"
+        "itemID": 17,
+        "itemName": "Garden-Fresh Salad",
+        "itemPrice": 5.25,
+        "itemType": "soups/salad"
     },
     {
-        "itemid": 18,
-        "name": "Grilled Chicken Caesar",
-        "price": 8.95,
-        "itemtype": "soups/salad"
+        "itemID": 18,
+        "itemName": "Grilled Chicken Caesar",
+        "itemPrice": 8.95,
+        "itemType": "soups/salad"
     },
     {
-        "itemid": 19,
-        "name": "Lasanga Classico",
-        "price": 8.5,
-        "itemtype": "lunch_entree"
+        "itemID": 19,
+        "itemName": "Lasanga Classico",
+        "itemPrice": 8.5,
+        "itemType": "lunch_entree"
     },
     {
-        "itemid": 20,
-        "name": "Eggplant Parmigiana",
-        "price": 7.95,
-        "itemtype": "lunch_entree"
+        "itemID": 20,
+        "itemName": "Eggplant Parmigiana",
+        "itemPrice": 7.95,
+        "itemType": "lunch_entree"
     },
     {
-        "itemid": 21,
-        "name": "Capellini Pomodoro",
-        "price": 7.5,
-        "itemtype": "lunch_entree"
+        "itemID": 21,
+        "itemName": "Capellini Pomodoro",
+        "itemPrice": 7.5,
+        "itemType": "lunch_entree"
     },
     {
-        "itemid": 22,
-        "name": "Cheese Ravioli",
-        "price": 7.75,
-        "itemtype": "lunch_entree"
+        "itemID": 22,
+        "itemName": "Cheese Ravioli",
+        "itemPrice": 7.75,
+        "itemType": "lunch_entree"
     },
     {
-        "itemid": 23,
-        "name": "Spaghetti & Meatballs",
-        "price": 8.95,
-        "itemtype": "lunch_entree"
+        "itemID": 23,
+        "itemName": "Spaghetti & Meatballs",
+        "itemPrice": 8.95,
+        "itemType": "lunch_entree"
     },
     {
-        "itemid": 24,
-        "name": "Braised Beef & Totelloni",
-        "price": 10.5,
-        "itemtype": "lunch_entree"
+        "itemID": 24,
+        "itemName": "Braised Beef & Totelloni",
+        "itemPrice": 10.5,
+        "itemType": "lunch_entree"
     },
     {
-        "itemid": 25,
-        "name": "Manicotti Formaggio",
-        "price": 8.75,
-        "itemtype": "lunch_entree"
+        "itemID": 25,
+        "itemName": "Manicotti Formaggio",
+        "itemPrice": 8.75,
+        "itemType": "lunch_entree"
     },
     {
-        "itemid": 26,
-        "name": "Spaghetti with Meat Sauce",
-        "price": 7.75,
-        "itemtype": "lunch_entree"
+        "itemID": 26,
+        "itemName": "Spaghetti with Meat Sauce",
+        "itemPrice": 7.75,
+        "itemType": "lunch_entree"
     },
     {
-        "itemid": 27,
-        "name": "Linguine all Marinara",
-        "price": 6.95,
-        "itemtype": "lunch_entree"
+        "itemID": 27,
+        "itemName": "Linguine all Marinara",
+        "itemPrice": 6.95,
+        "itemType": "lunch_entree"
     },
     {
-        "itemid": 28,
-        "name": "Chicken Parmigiana",
-        "price": 9.25,
-        "itemtype": "lunch_entree"
+        "itemID": 28,
+        "itemName": "Chicken Parmigiana",
+        "itemPrice": 9.25,
+        "itemType": "lunch_entree"
     },
     {
-        "itemid": 29,
-        "name": "Five Chess Ziti al Forno",
-        "price": 7.95,
-        "itemtype": "lunch_entree"
+        "itemID": 29,
+        "itemName": "Five Chess Ziti al Forno",
+        "itemPrice": 7.95,
+        "itemType": "lunch_entree"
     },
     {
-        "itemid": 30,
-        "name": "Ravioli di Portobello",
-        "price": 8.5,
-        "itemtype": "lunch_entree"
+        "itemID": 30,
+        "itemName": "Ravioli di Portobello",
+        "itemPrice": 8.5,
+        "itemType": "lunch_entree"
     },
     {
-        "itemid": 31,
-        "name": "Fettucine Alfredo",
-        "price": 7.95,
-        "itemtype": "lunch_entree"
+        "itemID": 31,
+        "itemName": "Fettucine Alfredo",
+        "itemPrice": 7.95,
+        "itemType": "lunch_entree"
     },
     {
-        "itemid": 32,
-        "name": "Lasagna Classico",
-        "price": 12.25,
-        "itemtype": "dinner_entree"
+        "itemID": 32,
+        "itemName": "Lasagna Classico",
+        "itemPrice": 12.25,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 33,
-        "name": "Five Chess Ziti al Forno",
-        "price": 10.95,
-        "itemtype": "dinner_entree"
+        "itemID": 33,
+        "itemName": "Five Chess Ziti al Forno",
+        "itemPrice": 10.95,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 34,
-        "name": "Spaghetti with Meat Sauce",
-        "price": 9.95,
-        "itemtype": "dinner_entree"
+        "itemID": 34,
+        "itemName": "Spaghetti with Meat Sauce",
+        "itemPrice": 9.95,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 35,
-        "name": "Linguine all Marinara",
-        "price": 9.75,
-        "itemtype": "dinner_entree"
+        "itemID": 35,
+        "itemName": "Linguine all Marinara",
+        "itemPrice": 9.75,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 36,
-        "name": "Chicken Parmigiana",
-        "price": 12.95,
-        "itemtype": "dinner_entree"
+        "itemID": 36,
+        "itemName": "Chicken Parmigiana",
+        "itemPrice": 12.95,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 37,
-        "name": "Fettucine Alfredo",
-        "price": 11.25,
-        "itemtype": "dinner_entree"
+        "itemID": 37,
+        "itemName": "Fettucine Alfredo",
+        "itemPrice": 11.25,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 38,
-        "name": "Eggplant Parmigiana",
-        "price": 11.25,
-        "itemtype": "dinner_entree"
+        "itemID": 38,
+        "itemName": "Eggplant Parmigiana",
+        "itemPrice": 11.25,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 39,
-        "name": "Capellini Pomodoro",
-        "price": 9.75,
-        "itemtype": "dinner_entree"
+        "itemID": 39,
+        "itemName": "Capellini Pomodoro",
+        "itemPrice": 9.75,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 40,
-        "name": "Spaghetti & Meatballs",
-        "price": 11.95,
-        "itemtype": "dinner_entree"
+        "itemID": 40,
+        "itemName": "Spaghetti & Meatballs",
+        "itemPrice": 11.95,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 41,
-        "name": "Tour of Italy",
-        "price": 15.25,
-        "itemtype": "dinner_entree"
+        "itemID": 41,
+        "itemName": "Tour of Italy",
+        "itemPrice": 15.25,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 42,
-        "name": "Pork Milanese",
-        "price": 14.5,
-        "itemtype": "dinner_entree"
+        "itemID": 42,
+        "itemName": "Pork Milanese",
+        "itemPrice": 14.5,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 43,
-        "name": "Chianti Braised Short Ribs",
-        "price": 15.5,
-        "itemtype": "dinner_entree"
+        "itemID": 43,
+        "itemName": "Chianti Braised Short Ribs",
+        "itemPrice": 15.5,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 44,
-        "name": "Steak Toscano",
-        "price": 19.95,
-        "itemtype": "dinner_entree"
+        "itemID": 44,
+        "itemName": "Steak Toscano",
+        "itemPrice": 19.95,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 45,
-        "name": "Steak Gorgonzola-Alfredo",
-        "price": 14.75,
-        "itemtype": "dinner_entree"
+        "itemID": 45,
+        "itemName": "Steak Gorgonzola-Alfredo",
+        "itemPrice": 14.75,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 46,
-        "name": "Mixed Grill",
-        "price": 15.5,
-        "itemtype": "dinner_entree"
+        "itemID": 46,
+        "itemName": "Mixed Grill",
+        "itemPrice": 15.5,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 47,
-        "name": "Braised Beef & Totelloni",
-        "price": 12.95,
-        "itemtype": "dinner_entree"
+        "itemID": 47,
+        "itemName": "Braised Beef & Totelloni",
+        "itemPrice": 12.95,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 48,
-        "name": "Cheese Ravioli",
-        "price": 9.95,
-        "itemtype": "dinner_entree"
+        "itemID": 48,
+        "itemName": "Cheese Ravioli",
+        "itemPrice": 9.95,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 49,
-        "name": "Ravioli di Portobello",
-        "price": 11.25,
-        "itemtype": "dinner_entree"
+        "itemID": 49,
+        "itemName": "Ravioli di Portobello",
+        "itemPrice": 11.25,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 50,
-        "name": "Manicotti Formaggio",
-        "price": 11.95,
-        "itemtype": "dinner_entree"
+        "itemID": 50,
+        "itemName": "Manicotti Formaggio",
+        "itemPrice": 11.95,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 51,
-        "name": "Venetian Apricot Chicken",
-        "price": 12.95,
-        "itemtype": "dinner_entree"
+        "itemID": 51,
+        "itemName": "Venetian Apricot Chicken",
+        "itemPrice": 12.95,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 52,
-        "name": "Chicken Alfredo",
-        "price": 13.25,
-        "itemtype": "dinner_entree"
+        "itemID": 52,
+        "itemName": "Chicken Alfredo",
+        "itemPrice": 13.25,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 53,
-        "name": "Garlic-Herb Chicken con Broccoli",
-        "price": 12.75,
-        "itemtype": "dinner_entree"
+        "itemID": 53,
+        "itemName": "Garlic-Herb Chicken con Broccoli",
+        "itemPrice": 12.75,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 54,
-        "name": "Chicken & Shrimp Carbonara",
-        "price": 15.75,
-        "itemtype": "dinner_entree"
+        "itemID": 54,
+        "itemName": "Chicken & Shrimp Carbonara",
+        "itemPrice": 15.75,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 55,
-        "name": "Chicken Marsala",
-        "price": 14.25,
-        "itemtype": "dinner_entree"
+        "itemID": 55,
+        "itemName": "Chicken Marsala",
+        "itemPrice": 14.25,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 56,
-        "name": "Chicken Scampi",
-        "price": 13.5,
-        "itemtype": "dinner_entree"
+        "itemID": 56,
+        "itemName": "Chicken Scampi",
+        "itemPrice": 13.5,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 57,
-        "name": "Chicken & Gnocchi Veronese",
-        "price": 13.5,
-        "itemtype": "dinner_entree"
+        "itemID": 57,
+        "itemName": "Chicken & Gnocchi Veronese",
+        "itemPrice": 13.5,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 58,
-        "name": "Stuffed Chicken Marsala",
-        "price": 14.75,
-        "itemtype": "dinner_entree"
+        "itemID": 58,
+        "itemName": "Stuffed Chicken Marsala",
+        "itemPrice": 14.75,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 59,
-        "name": "Shrimp Primavera",
-        "price": 13.95,
-        "itemtype": "dinner_entree"
+        "itemID": 59,
+        "itemName": "Shrimp Primavera",
+        "itemPrice": 13.95,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 60,
-        "name": "Grilled Shrimp Caprese",
-        "price": 15.75,
-        "itemtype": "dinner_entree"
+        "itemID": 60,
+        "itemName": "Grilled Shrimp Caprese",
+        "itemPrice": 15.75,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 61,
-        "name": "Parmesan Crusted Tilapia",
-        "price": 14.25,
-        "itemtype": "dinner_entree"
+        "itemID": 61,
+        "itemName": "Parmesan Crusted Tilapia",
+        "itemPrice": 14.25,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 62,
-        "name": "Herb-Grilled Salmon",
-        "price": 15.5,
-        "itemtype": "dinner_entree"
+        "itemID": 62,
+        "itemName": "Herb-Grilled Salmon",
+        "itemPrice": 15.5,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 63,
-        "name": "Seafood Alfredo",
-        "price": 14.5,
-        "itemtype": "dinner_entree"
+        "itemID": 63,
+        "itemName": "Seafood Alfredo",
+        "itemPrice": 14.5,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 64,
-        "name": "Shrimp & Asparagus Risotto",
-        "price": 14.75,
-        "itemtype": "dinner_entree"
+        "itemID": 64,
+        "itemName": "Shrimp & Asparagus Risotto",
+        "itemPrice": 14.75,
+        "itemType": "dinner_entree"
     },
     {
-        "itemid": 65,
-        "name": "Chicken Scampi",
-        "price": 9.95,
-        "itemtype": "chicken/seafood"
+        "itemID": 65,
+        "itemName": "Chicken Scampi",
+        "itemPrice": 9.95,
+        "itemType": "chicken/seafood"
     },
     {
-        "itemid": 66,
-        "name": "Grilled Chicken Spiedini",
-        "price": 9.95,
-        "itemtype": "chicken/seafood"
+        "itemID": 66,
+        "itemName": "Grilled Chicken Spiedini",
+        "itemPrice": 9.95,
+        "itemType": "chicken/seafood"
     },
     {
-        "itemid": 67,
-        "name": "Venetian Apricot Chicken",
-        "price": 9.5,
-        "itemtype": "chicken/seafood"
+        "itemID": 67,
+        "itemName": "Venetian Apricot Chicken",
+        "itemPrice": 9.5,
+        "itemType": "chicken/seafood"
     },
     {
-        "itemid": 68,
-        "name": "Seafood Alfredo",
-        "price": 10.75,
-        "itemtype": "chicken/seafood"
+        "itemID": 68,
+        "itemName": "Seafood Alfredo",
+        "itemPrice": 10.75,
+        "itemType": "chicken/seafood"
     },
     {
-        "itemid": 69,
-        "name": "Chicken & Gnocchi Veronese",
-        "price": 10.5,
-        "itemtype": "chicken/seafood"
+        "itemID": 69,
+        "itemName": "Chicken & Gnocchi Veronese",
+        "itemPrice": 10.5,
+        "itemType": "chicken/seafood"
     },
     {
-        "itemid": 70,
-        "name": "Shrimp Primavera",
-        "price": 9.95,
-        "itemtype": "chicken/seafood"
+        "itemID": 70,
+        "itemName": "Shrimp Primavera",
+        "itemPrice": 9.95,
+        "itemType": "chicken/seafood"
     },
     {
-        "itemid": 71,
-        "name": "Chicken Alfredo",
-        "price": 9.75,
-        "itemtype": "chicken/seafood"
+        "itemID": 71,
+        "itemName": "Chicken Alfredo",
+        "itemPrice": 9.75,
+        "itemType": "chicken/seafood"
     },
     {
-        "itemid": 72,
-        "name": "Grilled Shrimp Caprese",
-        "price": 11.75,
-        "itemtype": "chicken/seafood"
+        "itemID": 72,
+        "itemName": "Grilled Shrimp Caprese",
+        "itemPrice": 11.75,
+        "itemType": "chicken/seafood"
     },
     {
-        "itemid": 73,
-        "name": "Triamisu",
-        "price": 5.35,
-        "itemtype": "dessert"
+        "itemID": 73,
+        "itemName": "Triamisu",
+        "itemPrice": 5.35,
+        "itemType": "dessert"
     },
     {
-        "itemid": 74,
-        "name": "White Chocolate Raspberry Cheesecake",
-        "price": 5.5,
-        "itemtype": "dessert"
+        "itemID": 74,
+        "itemName": "White Chocolate Raspberry Cheesecake",
+        "itemPrice": 5.5,
+        "itemType": "dessert"
     },
     {
-        "itemid": 75,
-        "name": "Black Tie Mousse Cake",
-        "price": 5.95,
-        "itemtype": "dessert"
+        "itemID": 75,
+        "itemName": "Black Tie Mousse Cake",
+        "itemPrice": 5.95,
+        "itemType": "dessert"
     },
     {
-        "itemid": 76,
-        "name": "Zeppoli",
-        "price": 5.35,
-        "itemtype": "dessert"
+        "itemID": 76,
+        "itemName": "Zeppoli",
+        "itemPrice": 5.35,
+        "itemType": "dessert"
     },
     {
-        "itemid": 77,
-        "name": "Torta di Chocolate",
-        "price": 5.95,
-        "itemtype": "dessert"
+        "itemID": 77,
+        "itemName": "Torta di Chocolate",
+        "itemPrice": 5.95,
+        "itemType": "dessert"
     },
     {
-        "itemid": 78,
-        "name": "Lemon Cream Cake",
-        "price": 5.5,
-        "itemtype": "dessert"
+        "itemID": 78,
+        "itemName": "Lemon Cream Cake",
+        "itemPrice": 5.5,
+        "itemType": "dessert"
     },
     {
-        "itemid": 79,
-        "name": "Chocolate Gelato",
-        "price": 5.35,
-        "itemtype": "dessert"
+        "itemID": 79,
+        "itemName": "Chocolate Gelato",
+        "itemPrice": 5.35,
+        "itemType": "dessert"
     },
     {
-        "itemid": 80,
-        "name": "Water",
-        "price": 0,
-        "itemtype": "beverage_non_alcoholic"
+        "itemID": 80,
+        "itemName": "Water",
+        "itemPrice": 0,
+        "itemType": "beverage_non_alcoholic"
     },
     {
-        "itemid": 81,
-        "name": "Spring Water",
-        "price": 1.5,
-        "itemtype": "beverage_non_alcoholic"
+        "itemID": 81,
+        "itemName": "Spring Water",
+        "itemPrice": 1.5,
+        "itemType": "beverage_non_alcoholic"
     },
     {
-        "itemid": 82,
-        "name": "Soft Drink",
-        "price": 2,
-        "itemtype": "beverage_non_alcoholic"
+        "itemID": 82,
+        "itemName": "Soft Drink",
+        "itemPrice": 2,
+        "itemType": "beverage_non_alcoholic"
     },
     {
-        "itemid": 83,
-        "name": "Sweet Tea",
-        "price": 1.75,
-        "itemtype": "beverage_non_alcoholic"
+        "itemID": 83,
+        "itemName": "Sweet Tea",
+        "itemPrice": 1.75,
+        "itemType": "beverage_non_alcoholic"
     },
     {
-        "itemid": 84,
-        "name": "Drip Coffee",
-        "price": 2.25,
-        "itemtype": "beverage_non_alcoholic"
+        "itemID": 84,
+        "itemName": "Drip Coffee",
+        "itemPrice": 2.25,
+        "itemType": "beverage_non_alcoholic"
     },
     {
-        "itemid": 85,
-        "name": "Sauvignon Blanc",
-        "price": 8.25,
-        "itemtype": "beverage_alcoholic_wine"
+        "itemID": 85,
+        "itemName": "Sauvignon Blanc",
+        "itemPrice": 8.25,
+        "itemType": "beverage_alcoholic_wine"
     },
     {
-        "itemid": 86,
-        "name": "Riesling",
-        "price": 8.75,
-        "itemtype": "beverage_alcoholic_wine"
+        "itemID": 86,
+        "itemName": "Riesling",
+        "itemPrice": 8.75,
+        "itemType": "beverage_alcoholic_wine"
     },
     {
-        "itemid": 87,
-        "name": "Pinot Grigio",
-        "price": 10.5,
-        "itemtype": "beverage_alcoholic_wine"
+        "itemID": 87,
+        "itemName": "Pinot Grigio",
+        "itemPrice": 10.5,
+        "itemType": "beverage_alcoholic_wine"
     },
     {
-        "itemid": 88,
-        "name": "Chardonnay",
-        "price": 10.5,
-        "itemtype": "beverage_alcoholic_wine"
+        "itemID": 88,
+        "itemName": "Chardonnay",
+        "itemPrice": 10.5,
+        "itemType": "beverage_alcoholic_wine"
     },
     {
-        "itemid": 89,
-        "name": "Pinot Noir",
-        "price": 10.5,
-        "itemtype": "beverage_alcoholic_wine"
+        "itemID": 89,
+        "itemName": "Pinot Noir",
+        "itemPrice": 10.5,
+        "itemType": "beverage_alcoholic_wine"
     },
     {
-        "itemid": 90,
-        "name": "Cabernet Sauvignon",
-        "price": 12.75,
-        "itemtype": "beverage_alcoholic_wine"
+        "itemID": 90,
+        "itemName": "Cabernet Sauvignon",
+        "itemPrice": 12.75,
+        "itemType": "beverage_alcoholic_wine"
     },
     {
-        "itemid": 91,
-        "name": "Tempranillo",
-        "price": 8.75,
-        "itemtype": "beverage_alcoholic_wine"
+        "itemID": 91,
+        "itemName": "Tempranillo",
+        "itemPrice": 8.75,
+        "itemType": "beverage_alcoholic_wine"
     },
     {
-        "itemid": 92,
-        "name": "Blue Moon",
-        "price": 6.75,
-        "itemtype": "beverage_alcoholic_beer_tap"
+        "itemID": 92,
+        "itemName": "Blue Moon",
+        "itemPrice": 6.75,
+        "itemType": "beverage_alcoholic_beer_tap"
     },
     {
-        "itemid": 93,
-        "name": "Modelo",
-        "price": 6.75,
-        "itemtype": "beverage_alcoholic_beer_tap"
+        "itemID": 93,
+        "itemName": "Modelo",
+        "itemPrice": 6.75,
+        "itemType": "beverage_alcoholic_beer_tap"
     },
     {
-        "itemid": 94,
-        "name": "Stella Artois",
-        "price": 6.75,
-        "itemtype": "beverage_alcoholic_beer_tap"
+        "itemID": 94,
+        "itemName": "Stella Artois",
+        "itemPrice": 6.75,
+        "itemType": "beverage_alcoholic_beer_tap"
     },
     {
-        "itemid": 95,
-        "name": "Sam Adams Cold Snap",
-        "price": 6.5,
-        "itemtype": "beverage_alcoholic_beer_tap"
+        "itemID": 95,
+        "itemName": "Sam Adams Cold Snap",
+        "itemPrice": 6.5,
+        "itemType": "beverage_alcoholic_beer_tap"
     },
     {
-        "itemid": 96,
-        "name": "Lagunitas IPA",
-        "price": 6.5,
-        "itemtype": "beverage_alcoholic_beer_tap"
+        "itemID": 96,
+        "itemName": "Lagunitas IPA",
+        "itemPrice": 6.5,
+        "itemType": "beverage_alcoholic_beer_tap"
     },
     {
-        "itemid": 97,
-        "name": "Guinness",
-        "price": 7.75,
-        "itemtype": "beverage_alcoholic_beer_tap"
+        "itemID": 97,
+        "itemName": "Guinness",
+        "itemPrice": 7.75,
+        "itemType": "beverage_alcoholic_beer_tap"
     },
     {
-        "itemid": 98,
-        "name": "Sam Adams Boston Lager",
-        "price": 6.5,
-        "itemtype": "beverage_alcoholic_beer_tap"
+        "itemID": 98,
+        "itemName": "Sam Adams Boston Lager",
+        "itemPrice": 6.5,
+        "itemType": "beverage_alcoholic_beer_tap"
     },
     {
-        "itemid": 99,
-        "name": "Budweiser",
-        "price": 4.95,
-        "itemtype": "beverage_alcoholic_beer_bottle"
+        "itemID": 99,
+        "itemName": "Budweiser",
+        "itemPrice": 4.95,
+        "itemType": "beverage_alcoholic_beer_bottle"
     },
     {
-        "itemid": 100,
-        "name": "Bud Light",
-        "price": 4.95,
-        "itemtype": "beverage_alcoholic_beer_bottle"
+        "itemID": 100,
+        "itemName": "Bud Light",
+        "itemPrice": 4.95,
+        "itemType": "beverage_alcoholic_beer_bottle"
     },
     {
-        "itemid": 101,
-        "name": "Corona Extra",
-        "price": 6.5,
-        "itemtype": "beverage_alcoholic_beer_bottle"
+        "itemID": 101,
+        "itemName": "Corona Extra",
+        "itemPrice": 6.5,
+        "itemType": "beverage_alcoholic_beer_bottle"
     },
     {
-        "itemid": 102,
-        "name": "Corona Light",
-        "price": 6.5,
-        "itemtype": "beverage_alcoholic_beer_bottle"
+        "itemID": 102,
+        "itemName": "Corona Light",
+        "itemPrice": 6.5,
+        "itemType": "beverage_alcoholic_beer_bottle"
     },
     {
-        "itemid": 103,
-        "name": "Heineken",
-        "price": 6.5,
-        "itemtype": "beverage_alcoholic_beer_bottle"
+        "itemID": 103,
+        "itemName": "Heineken",
+        "itemPrice": 6.5,
+        "itemType": "beverage_alcoholic_beer_bottle"
     },
     {
-        "itemid": 104,
-        "name": "Miller Lite",
-        "price": 4.95,
-        "itemtype": "beverage_alcoholic_beer_bottle"
+        "itemID": 104,
+        "itemName": "Miller Lite",
+        "itemPrice": 4.95,
+        "itemType": "beverage_alcoholic_beer_bottle"
     },
     {
-        "itemid": 105,
-        "name": "Miller High Life",
-        "price": 4.95,
-        "itemtype": "beverage_alcoholic_beer_bottle"
+        "itemID": 105,
+        "itemName": "Miller High Life",
+        "itemPrice": 4.95,
+        "itemType": "beverage_alcoholic_beer_bottle"
     },
     {
-        "itemid": 106,
-        "name": "White Claw",
-        "price": 4.95,
-        "itemtype": "beverage_alcoholic_beer_bottle"
+        "itemID": 106,
+        "itemName": "White Claw",
+        "itemPrice": 4.95,
+        "itemType": "beverage_alcoholic_beer_bottle"
     }
 ]

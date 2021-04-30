@@ -25,14 +25,15 @@ object RequestHandler {
         None
     }
 
+
     def load_menu: Option[List[Item]] = {
         val table = load_database("MENU_ITEMS")
         if(table.isEmpty)  None
         else {
             val received = table.get
             val decoded = Parse.decodeOption[List[Item]](received.toString())
-            if(decoded.nonEmpty) decoded
-            else None
+            if(decoded.isEmpty) None
+            else decoded
         }
     }
 

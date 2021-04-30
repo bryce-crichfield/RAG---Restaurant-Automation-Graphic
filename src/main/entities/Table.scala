@@ -5,14 +5,15 @@ import entities.FloorManager.WIDTH
 import entities.status.{ERROR_STATUS_ORDER, OrderStatus}
 
 
-case class Table(id: Int, order: Option[Order]) {
+class Table(id: Int, var order: Order) {
 
     val x: Int = id % WIDTH
     val y: Int = id / WIDTH
 
     val status: OrderStatus = {
-        if(order.isDefined) order.get.status
+        if(order != null) order.status
         else ERROR_STATUS_ORDER
     }
+
 
 }

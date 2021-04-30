@@ -1,16 +1,17 @@
 package org.eleven
 package entities
 
+import scala.collection.mutable.ListBuffer
+
 object FloorManager {
 
     val TABLE_COUNT = 36
     val WIDTH = 6
     val HEIGHT = 6
 
-    private val tables: List[Table] = (for (id <- 1 to 36) yield Table(id, None)).toList
-
-
-    def table(id: Int): Table = tables.filter(_.id == id).head
-
-
+    val tables: List[Table] = {
+        (for (id <- 1 to 36)
+            yield new Table(id, new Order(ListBuffer[Item](), id))).toList
+    }
+    def getTable(tableID: Int): Table = tables(tableID);
 }
