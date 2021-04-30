@@ -1,7 +1,7 @@
 package org.eleven
 package entities
 
-import entities.FloorManager.WIDTH
+import entities.OrderManager.WIDTH
 import entities.status.{DIRTY, ERROR_STATUS_ORDER, ERROR_STATUS_TABLE, OCCUPIED, OPEN, OrderStatus, TableStatus}
 
 

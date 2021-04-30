@@ -1,15 +1,14 @@
 package org.eleven
 package entities
 
-import entities.status.{OrderStatus, PLACED}
+import entities.status.{OrderStatus, PLACED, UNPLACED}
 
 import scala.collection.mutable.ListBuffer
 import scala.util.Random
 
 class Order(private var items: ListBuffer[Item],
             val tableid: Int,
-            var seat_num: Int = 0,
-            var status: OrderStatus = PLACED) {
+            private var status: OrderStatus = UNPLACED) {
     val orderID = Random.between(0, 1000000)
 
     //String representations used to maintain compatibility with JFX TableView
@@ -17,7 +16,10 @@ class Order(private var items: ListBuffer[Item],
 
     def subTotalString = subtotal.toString
 
-    def totalString = total().toString
+    def totalString = {
+        val n = BigDecimal(subTotalString).setScale(2, BigDecimal. RoundingMode.HALF_UP)
+        n.toDouble.toString
+    }
 
     def subtotal: Double = items.map(_.itemPrice).sum
 
@@ -36,6 +38,9 @@ class Order(private var items: ListBuffer[Item],
     }
 
     def getItems(): List[Item] = items.toList
+
+    def getStatus = status
+    def setStatus(s: OrderStatus) = status
 }
 
 

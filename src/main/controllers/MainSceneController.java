@@ -19,8 +19,11 @@ import org.eleven.entities.Menu;
 import org.eleven.entities.status.OPEN;
 import org.eleven.resource.SceneLoader;
 import scala.collection.immutable.List;
+import scala.collection.mutable.Queue;
 
+import javax.swing.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -31,18 +34,19 @@ public class MainSceneController implements Controller {
     @FXML MenuBar menuBar;
     @FXML GridPane tableGrid;
     @FXML AnchorPane orderItemsPane;
-    @FXML AnchorPane orderStatsPanes;
     ArrayList<Button> tableGridButtons = new ArrayList<>();
     ArrayList<Region> tableGridRegions = new ArrayList<>();
     //Table Views for Menus:
-    ArrayList<TableView> menuTables = new ArrayList<>();
+    HashMap<String, TableView> menuTables = new HashMap<>();
     @FXML ChoiceBox seatNumChoiceBox;
     @FXML AnchorPane menuPane;
+    @FXML AnchorPane queuePane;
     @FXML Button entreesFilterButton;
     @FXML Button lunchFilterButton;
     @FXML Button soupsFilterButton;
     @FXML Button dessertsFilterButton;
     @FXML Button drinksFilterButton;
+    @FXML Button appetizersFilterButton;
     //Table View for Orders:
     ArrayList<TableView> orderTables = new ArrayList<>();
 
@@ -56,7 +60,7 @@ public class MainSceneController implements Controller {
 
     //Represents the currently selected table
     int selectedTableID = 1;
-    Table selectedTable = FloorManager.getTable(selectedTableID);
+    Table selectedTable = OrderManager.getTable(selectedTableID);
 
     public void initialize() {
         initializeButtonGrid();
@@ -85,21 +89,23 @@ public class MainSceneController implements Controller {
         }
     }
     private void initializeMenuTablesArray() {
-        menuTables.add(newMenuTableView(Menu.entrees()));
-        menuTables.add(newMenuTableView(Menu.appetizers()));
-        menuTables.add(newMenuTableView(Menu.lunch()));
-        menuTables.add(newMenuTableView(Menu.desserts()));
-        menuTables.add(newMenuTableView(Menu.salads()));
-        menuTables.add(newMenuTableView(Menu.drinks()));
+        menuTables.put("entrees", newMenuTableView(Menu.entrees()));
+        menuTables.put("appetizers", newMenuTableView(Menu.appetizers()));
+        menuTables.put("lunch", newMenuTableView(Menu.lunch()));
+        menuTables.put("desserts", newMenuTableView(Menu.desserts()));
+        menuTables.put("soups", newMenuTableView(Menu.salads()));
+        menuTables.put("drinks", newMenuTableView(Menu.drinks()));
+        menuPane.getChildren().add(menuTables.get("drinks"));
     }
     private void initializeOrderTablesArray() {
-        for (int t = 0; t < FloorManager.tables().size(); t++) {
-            Table table = FloorManager.getTable(t);
+        for (int t = 0; t < OrderManager.tables().size(); t++) {
+            Table table = OrderManager.getTable(t);
             TableView tableView = newOrderTableView(table);
             orderTables.add(tableView);
         }
         orderItemsPane.getChildren().add(orderTables.get(0));
     }
+
 
     private TableView newMenuTableView(List<Item> items) {
         TableView newTableView = new TableView();
@@ -116,7 +122,8 @@ public class MainSceneController implements Controller {
         newTableView.getColumns().add(menuItemName);
         newTableView.getColumns().add(menuItemPrice);
         newTableView.getColumns().add(menuItemType);
-
+        newTableView.prefWidthProperty().bind(menuPane.widthProperty());
+        newTableView.prefHeightProperty().bind(menuPane.heightProperty());
         items.foreach(i -> newTableView.getItems().add(i));
         return newTableView;
     }
@@ -137,16 +144,33 @@ public class MainSceneController implements Controller {
         return newTableView;
     }
 
+    private TableView newQueueTableView(Queue<Order> queue) {
+        TableView newTableView = new TableView();
+        TableColumn<Order, String> orderID = new TableColumn<>("Order ID");
+        TableColumn<Order, String> tableID = new TableColumn<>("Table ID");
+        TableColumn<Order, String> orderStatus = new TableColumn<>("Order Status");
+        orderID.setCellValueFactory(data -> new SimpleStringProperty(String.valueOf(data.getValue().orderID())));
+        orderStatus.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getStatus().ID()));
+        tableID.setCellValueFactory(data -> new SimpleStringProperty(String.valueOf(data.getValue().tableid())));
+        newTableView.getColumns().add(orderID);
+        newTableView.getColumns().add(orderStatus);
+        newTableView.getColumns().add(tableID);
+        newTableView.prefWidthProperty().bind(queuePane.widthProperty());
+        newTableView.prefHeightProperty().bind(queuePane.heightProperty());
+        queue.foreach(o -> newTableView.getItems().add(o));
+        return newTableView;
+    }
+
     public void update() {
         updateOrderTableView();
         updateOrderTabTextFields();
         updateTableGrid();
+        updateOrderQueueView();
     }
     private void updateOrderTableView() {
-        TableView currentView = orderTables.get(selectedTableID);
-        Table currentTable = FloorManager.getTable(selectedTableID);
-        currentView = newOrderTableView(currentTable);
-        orderItemsPane.getChildren().removeAll();
+        Table currentTable = OrderManager.getTable(selectedTableID);
+        TableView currentView = currentView = newOrderTableView(currentTable);
+        orderItemsPane.getChildren().clear();
         orderItemsPane.getChildren().add(currentView);
     }
     private void updateOrderTabTextFields() {
@@ -168,9 +192,14 @@ public class MainSceneController implements Controller {
             } else {
                 region.setBorder(null);
             }
-            Color color = FloorManager.getTable(extractedID).getStatus().color();
+            Color color = OrderManager.getTable(extractedID).getStatus().color();
             region.setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
         }
+    }
+
+    private void updateOrderQueueView() {
+        queuePane.getChildren().clear();
+        queuePane.getChildren().add(newQueueTableView(OrderManager.getQueue()));
     }
 
     public void logOutButtonPressed(ActionEvent event) {
@@ -185,7 +214,7 @@ public class MainSceneController implements Controller {
     }
     public void tableButtonPressed(ActionEvent event) {
         selectedTableID = Integer.parseInt(extractTableID((Node) event.getSource()));
-        selectedTable = FloorManager.getTable(selectedTableID);
+        selectedTable = OrderManager.getTable(selectedTableID);
         update();
     }
     public void addItemButtonPressed(ActionEvent event) {
@@ -209,8 +238,20 @@ public class MainSceneController implements Controller {
         update();
     }
     public void filterButtonPressed(ActionEvent event) {
-        System.out.println(extractMenuName((Node) event.getSource()));
+       String extractedType = extractMenuName((Node) event.getSource());
+        System.out.println(extractedType);
+       menuPane.getChildren().removeAll();
+       menuPane.getChildren().clear();
+       menuPane.getChildren().add(menuTables.get(extractedType));
     }
+
+    public void submitOrderButtonPressed(ActionEvent event) {
+        Order submitOrder = OrderManager.getTable(selectedTableID).getOrder();
+        OrderManager.submitOrder(submitOrder);
+        update();
+        System.out.println(OrderManager.getQueue());
+    }
+
     private String extractTableID(Node node) {
         String id = node.getId();
         Pattern pattern = Pattern.compile("\\d+");

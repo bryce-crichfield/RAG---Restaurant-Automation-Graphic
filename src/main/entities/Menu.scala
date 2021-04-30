@@ -23,5 +23,14 @@ object Menu {
     val appetizers = items.filter(_.itemType == "appetizer")
     val desserts = items.filter(_.itemType == "dessert")
 
+    def getMenu(s: String) = s match {
+        case "entrees" => entrees
+        case "drinks" => drinks
+        case "lunch" => lunch
+        case "salads" => salads
+        case "appetizers" => appetizers
+        case "desserts" => desserts
+    }
+
 
 }

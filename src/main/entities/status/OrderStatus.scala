@@ -15,6 +15,7 @@ trait OrderStatus extends Status
 
 object OrderStatus {
     def OrderStatus(s: String): OrderStatus = s match {
+        case "UNPLACED" => UNPLACED
         case "PLACED" => PLACED
         case "KITCHEN_ACCEPTED" => KITCHEN_ACCEPTED
         case "KITCHEN_COMPLETED" => KITCHEN_COMPLETED
@@ -22,6 +23,11 @@ object OrderStatus {
         case "ORDER_COMPLETED" => ORDER_COMPLETED
         case _ => ERROR_STATUS_ORDER
     }
+}
+
+case object UNPLACED extends OrderStatus {
+    val color: Color = Yellow100
+    def ID: String = "UNPLACED"
 }
 
 case object PLACED extends OrderStatus {
@@ -96,37 +102,3 @@ case object ERROR_STATUS_TABLE extends TableStatus {
 }
 
 
-trait GuestStatus extends Status
-
-object GuestStatus {
-    def GuestStatus(s: String): GuestStatus = s match {
-        case "LOBBIED" => LOBBIED
-        case "SEATED" => SEATED
-        case "BILLED" => BILLED
-        case _ => ERROR_STATUS_GUEST
-    }
-}
-
-case object LOBBIED extends GuestStatus {
-    val color: Color = Yellow300
-
-    def ID: String = "LOBBIED"
-}
-
-case object SEATED extends GuestStatus {
-    val color: Color = Green100
-
-    def ID: String = "SEATED"
-}
-
-case object BILLED extends GuestStatus {
-    val color: Color = Green300
-
-    def ID: String = "BILLED"
-}
-
-case object ERROR_STATUS_GUEST extends GuestStatus {
-    val color: Color = Red500
-
-    def ID: String = "ERROR_STATUS_GUEST"
-}
