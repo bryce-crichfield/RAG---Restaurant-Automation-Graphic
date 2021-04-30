@@ -1,26 +1,12 @@
-package org.eleven;
-
-import argonaut.Json;
 import javafx.application.Application;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import org.eleven.entities.Item;
-import org.eleven.entities.Menu;
-import org.eleven.resource.RequestHandler;
-import org.eleven.resource.SceneLoader;
-import org.eleven.user.User;
-import scala.Option;
-import scala.collection.immutable.List;
-
-import java.util.ArrayList;
+import resource.SceneLoader;
 
 public class Launcher extends Application {
 
     public final String LOGIN_SCENE = "login_scene_layout";
     public final String MAIN_SCENE = "main_scene_layout";
-
 
     public static void main(String[] args) {
         launch();

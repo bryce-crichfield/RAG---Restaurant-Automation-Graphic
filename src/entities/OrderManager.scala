@@ -1,10 +1,8 @@
-package org.eleven
 package entities
 
-import org.eleven.entities.status.PLACED
+import entities.status.PLACED
 
-import scala.collection.mutable.Queue
-import scala.collection.mutable.ListBuffer
+import scala.collection.mutable.{ListBuffer, Queue}
 
 object OrderManager {
 
@@ -22,13 +20,15 @@ object OrderManager {
     def submitOrder(order: Order): Unit = {
         order.setStatus(PLACED)
         val sameOrder = queue.filter(o => o.orderID == order.orderID)
-        if(sameOrder.nonEmpty) {
+        if (sameOrder.nonEmpty) {
             val idx = queue.indexOf(sameOrder.head)
             queue(idx) = order
         } else {
             queue.addOne(order)
         }
     }
+
     def getQueue(): Queue[Order] = queue
+
     def getTable(tableID: Int): Table = tables(tableID);
 }

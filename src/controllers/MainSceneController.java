@@ -1,5 +1,8 @@
-package org.eleven.controllers;
+package controllers;
 
+import entities.Menu;
+import entities.*;
+import entities.status.OPEN;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,21 +10,14 @@ import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.Button;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import org.eleven.entities.*;
-import org.eleven.entities.Menu;
-import org.eleven.entities.status.OPEN;
-import org.eleven.resource.SceneLoader;
+import resource.SceneLoader;
 import scala.collection.immutable.List;
 import scala.collection.mutable.Queue;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.regex.Matcher;
@@ -30,33 +26,52 @@ import java.util.regex.Pattern;
 
 public class MainSceneController implements Controller {
 
-    @FXML MenuItem logOutButton;
-    @FXML MenuBar menuBar;
-    @FXML GridPane tableGrid;
-    @FXML AnchorPane orderItemsPane;
+    @FXML
+    MenuItem logOutButton;
+    @FXML
+    MenuBar menuBar;
+    @FXML
+    GridPane tableGrid;
+    @FXML
+    AnchorPane orderItemsPane;
     ArrayList<Button> tableGridButtons = new ArrayList<>();
     ArrayList<Region> tableGridRegions = new ArrayList<>();
     //Table Views for Menus:
     HashMap<String, TableView> menuTables = new HashMap<>();
-    @FXML ChoiceBox seatNumChoiceBox;
-    @FXML AnchorPane menuPane;
-    @FXML AnchorPane queuePane;
-    @FXML Button entreesFilterButton;
-    @FXML Button lunchFilterButton;
-    @FXML Button soupsFilterButton;
-    @FXML Button dessertsFilterButton;
-    @FXML Button drinksFilterButton;
-    @FXML Button appetizersFilterButton;
+    @FXML
+    ChoiceBox seatNumChoiceBox;
+    @FXML
+    AnchorPane menuPane;
+    @FXML
+    AnchorPane queuePane;
+    @FXML
+    Button entreesFilterButton;
+    @FXML
+    Button lunchFilterButton;
+    @FXML
+    Button soupsFilterButton;
+    @FXML
+    Button dessertsFilterButton;
+    @FXML
+    Button drinksFilterButton;
+    @FXML
+    Button appetizersFilterButton;
     //Table View for Orders:
     ArrayList<TableView> orderTables = new ArrayList<>();
 
     //Order Tab Text Fields
-    @FXML Text tableNumberText;
-    @FXML Text tableStatusText;
-    @FXML Text orderStatusText;
-    @FXML Text orderIDText;
-    @FXML Text orderSubtotalText;
-    @FXML Text orderTotalText;
+    @FXML
+    Text tableNumberText;
+    @FXML
+    Text tableStatusText;
+    @FXML
+    Text orderStatusText;
+    @FXML
+    Text orderIDText;
+    @FXML
+    Text orderSubtotalText;
+    @FXML
+    Text orderTotalText;
 
     //Represents the currently selected table
     int selectedTableID = 1;
@@ -82,12 +97,14 @@ public class MainSceneController implements Controller {
         tableGridButtons.forEach(b -> b.setText("Tbl. " + extractTableID(b)));
         tableGridRegions.forEach(r -> r.setBackground(new Background(new BackgroundFill(OPEN.color(), CornerRadii.EMPTY, Insets.EMPTY))));
     }
+
     private void initializeSeatNumChoiceBox() {
         for (int i = 1; i < 5; i++) {
             String option = "Seat: ".concat(String.valueOf(i));
             seatNumChoiceBox.getItems().add(option);
         }
     }
+
     private void initializeMenuTablesArray() {
         menuTables.put("entrees", newMenuTableView(Menu.entrees()));
         menuTables.put("appetizers", newMenuTableView(Menu.appetizers()));
@@ -97,6 +114,7 @@ public class MainSceneController implements Controller {
         menuTables.put("drinks", newMenuTableView(Menu.drinks()));
         menuPane.getChildren().add(menuTables.get("drinks"));
     }
+
     private void initializeOrderTablesArray() {
         for (int t = 0; t < OrderManager.tables().size(); t++) {
             Table table = OrderManager.getTable(t);
@@ -105,7 +123,6 @@ public class MainSceneController implements Controller {
         }
         orderItemsPane.getChildren().add(orderTables.get(0));
     }
-
 
     private TableView newMenuTableView(List<Item> items) {
         TableView newTableView = new TableView();
@@ -127,6 +144,7 @@ public class MainSceneController implements Controller {
         items.foreach(i -> newTableView.getItems().add(i));
         return newTableView;
     }
+
     private TableView newOrderTableView(Table table) {
         TableView newTableView = new TableView();
         TableColumn<Item, String> itemName = new TableColumn<>("Item Name");
@@ -167,12 +185,14 @@ public class MainSceneController implements Controller {
         updateTableGrid();
         updateOrderQueueView();
     }
+
     private void updateOrderTableView() {
         Table currentTable = OrderManager.getTable(selectedTableID);
         TableView currentView = currentView = newOrderTableView(currentTable);
         orderItemsPane.getChildren().clear();
         orderItemsPane.getChildren().add(currentView);
     }
+
     private void updateOrderTabTextFields() {
         tableNumberText.setText(String.valueOf(selectedTableID));
         tableStatusText.setText(selectedTable.getStatus().ID());
@@ -183,6 +203,7 @@ public class MainSceneController implements Controller {
         orderSubtotalText.setText(selectedTable.getOrder().subTotalString());
         orderTotalText.setText(selectedTable.getOrder().totalString());
     }
+
     private void updateTableGrid() {
         for (Region region : tableGridRegions) {
             int extractedID = Integer.parseInt(extractTableID((region)));
@@ -212,37 +233,42 @@ public class MainSceneController implements Controller {
         primaryStage.setFullScreen(false);
         primaryStage.show();
     }
+
     public void tableButtonPressed(ActionEvent event) {
         selectedTableID = Integer.parseInt(extractTableID((Node) event.getSource()));
         selectedTable = OrderManager.getTable(selectedTableID);
         update();
     }
+
     public void addItemButtonPressed(ActionEvent event) {
         //Get currently selected item from the Menu Table
         TableView currentTab = (TableView) menuPane.getChildren().get(0);
         Item selectedItem = (Item) currentTab.getSelectionModel().getSelectedItem();
-        if(selectedItem == null) return;
+        if (selectedItem == null) return;
         selectedItem.setSeatNum(seatNumChoiceBox.getSelectionModel().getSelectedIndex() + 1);
         selectedTable.getOrder().addItem(selectedItem);
         System.out.println(selectedTable.getOrder().subtotal());
         update();
     }
+
     public void deleteItemButtonPressed(ActionEvent event) {
         TableView currentTab = (TableView) orderItemsPane.getChildren().get(0);
         System.out.println(currentTab.getItems());
         Object selectedItem = currentTab.getSelectionModel().getSelectedItem();
         System.out.println(selectedItem);
     }
+
     public void tableStatusButtonPressed() {
         selectedTable.setStatus(selectedTable.nextStatus());
         update();
     }
+
     public void filterButtonPressed(ActionEvent event) {
-       String extractedType = extractMenuName((Node) event.getSource());
+        String extractedType = extractMenuName((Node) event.getSource());
         System.out.println(extractedType);
-       menuPane.getChildren().removeAll();
-       menuPane.getChildren().clear();
-       menuPane.getChildren().add(menuTables.get(extractedType));
+        menuPane.getChildren().removeAll();
+        menuPane.getChildren().clear();
+        menuPane.getChildren().add(menuTables.get(extractedType));
     }
 
     public void submitOrderButtonPressed(ActionEvent event) {
@@ -260,13 +286,13 @@ public class MainSceneController implements Controller {
         while (matcher.find()) extracted.append(matcher.group());
         return extracted.toString();
     }
+
     private String extractMenuName(Node node) {
         String id = node.getId();
         Pattern pattern = Pattern.compile("[a-zA-Z]+(?=FilterButton)");
         Matcher matcher = pattern.matcher(id);
         StringBuilder extracted = new StringBuilder();
-        while(matcher.find()) extracted.append(matcher.group());
+        while (matcher.find()) extracted.append(matcher.group());
         return extracted.toString();
     }
-
 }

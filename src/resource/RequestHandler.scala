@@ -1,15 +1,18 @@
-package org.eleven
 package resource
 
+import argonaut.{Json, Parse}
 import entities.Item
 import user.User
-
-import argonaut.{Json, Parse}
 
 import scala.io.Source
 import scala.util.Using
 
+/** * Singleton object that is responsible for handling the loading
+ * of the .json files that application specific information is stored in
+ */
+
 object RequestHandler {
+
 
     def validate_user(username: String, password: String): Option[User] = {
         val table = load_database("USERS")
@@ -28,19 +31,21 @@ object RequestHandler {
 
     def load_menu: Option[List[Item]] = {
         val table = load_database("MENU_ITEMS")
-        if(table.isEmpty)  None
+        if (table.isEmpty) None
         else {
             val received = table.get
             val decoded = Parse.decodeOption[List[Item]](received.toString())
-            if(decoded.isEmpty) None
+            if (decoded.isEmpty) None
             else decoded
         }
     }
 
     def load_database(db_name: String): Option[Json] = {
         val resource = getClass.getResource(s"/database_tables/$db_name.json").toURI
-        val source = Using(Source.fromFile(resource)) {_.mkString}
-        if(source.isSuccess) Parse.parseOption(source.get)
+        val source = Using(Source.fromFile(resource)) {
+            _.mkString
+        }
+        if (source.isSuccess) Parse.parseOption(source.get)
         else None
     }
 

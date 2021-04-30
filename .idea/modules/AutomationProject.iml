@@ -8,9 +8,10 @@
       <sourceFolder url="file://$MODULE_DIR$/../../resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../src/test/scala" isTestSource="true" packagePrefix="org.eleven" />
       <sourceFolder url="file://$MODULE_DIR$/../../src/main" isTestSource="false" packagePrefix="org.eleven" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/../../target" />
       <excludeFolder url="file://$MODULE_DIR$/../../resources/sfx_layouts/exc" />
-      <excludeFolder url="file://$MODULE_DIR$/../../src/main/controllers/exc" />
+      <excludeFolder url="file://$MODULE_DIR$/../../src/controllers/exc" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -35,5 +36,6 @@
         <jarDirectory url="file://$USER_HOME$/JAR Libaries/javafx-sdk-11.0.2/lib" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>

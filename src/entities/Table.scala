@@ -1,8 +1,7 @@
-package org.eleven
 package entities
 
 import entities.OrderManager.WIDTH
-import entities.status.{DIRTY, ERROR_STATUS_ORDER, ERROR_STATUS_TABLE, OCCUPIED, OPEN, OrderStatus, TableStatus}
+import entities.status._
 
 
 class Table(id: Int, private var order: Order, private var status: TableStatus = OPEN) {

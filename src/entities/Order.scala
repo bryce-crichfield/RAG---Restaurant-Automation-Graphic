@@ -1,7 +1,6 @@
-package org.eleven
 package entities
 
-import entities.status.{OrderStatus, PLACED, UNPLACED}
+import entities.status.{OrderStatus, UNPLACED}
 
 import scala.collection.mutable.ListBuffer
 import scala.util.Random
@@ -17,7 +16,7 @@ class Order(private var items: ListBuffer[Item],
     def subTotalString = subtotal.toString
 
     def totalString = {
-        val n = BigDecimal(subTotalString).setScale(2, BigDecimal. RoundingMode.HALF_UP)
+        val n = BigDecimal(subTotalString).setScale(2, BigDecimal.RoundingMode.HALF_UP)
         n.toDouble.toString
     }
 
@@ -40,6 +39,7 @@ class Order(private var items: ListBuffer[Item],
     def getItems(): List[Item] = items.toList
 
     def getStatus = status
+
     def setStatus(s: OrderStatus) = status
 }
 

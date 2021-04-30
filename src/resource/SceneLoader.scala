@@ -1,8 +1,6 @@
-package org.eleven
 package resource
 
 import controllers.Controller
-
 import javafx.fxml.FXMLLoader
 import javafx.scene.{Parent, Scene}
 

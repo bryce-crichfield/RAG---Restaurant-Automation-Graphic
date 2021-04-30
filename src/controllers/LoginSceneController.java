@@ -1,4 +1,4 @@
-package org.eleven.controllers;
+package controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,10 +7,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import org.eleven.resource.RequestHandler;
-import org.eleven.resource.SceneLoader;
-import org.eleven.user.User;
+import resource.RequestHandler;
+import resource.SceneLoader;
 import scala.Option;
+import user.User;
 
 
 public class LoginSceneController implements Controller {
@@ -25,6 +25,10 @@ public class LoginSceneController implements Controller {
         System.out.println("Initializing the Login Scene");
     }
 
+    /***
+     *
+     * @param event
+     */
     public void loginButtonClicked(ActionEvent event) {
         if (!validateInput()) return;
         SceneLoader sceneLoader = SceneLoader.load_scene("main_scene_layout");

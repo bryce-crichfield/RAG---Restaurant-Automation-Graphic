@@ -1,4 +1,4 @@
-package org.eleven
+
 package entities
 
 import argonaut.Argonaut.casecodec4

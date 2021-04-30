@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AutomationProject.iml" filepath="$PROJECT_DIR$/.idea/modules/AutomationProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AutomationProject-build.iml" filepath="$PROJECT_DIR$/.idea/modules/AutomationProject-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/division and subtraction/division and subtraction.iml" filepath="$PROJECT_DIR$/division and subtraction/division and subtraction.iml" />
     </modules>
   </component>
 </project>

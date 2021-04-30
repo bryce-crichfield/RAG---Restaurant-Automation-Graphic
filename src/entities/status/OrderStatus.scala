@@ -1,9 +1,7 @@
-package org.eleven
 package entities.status
 
-import resource.ColorPalette._
-
 import javafx.scene.paint.Color
+import resource.ColorPalette._
 
 trait Status {
     val color: Color
@@ -27,6 +25,7 @@ object OrderStatus {
 
 case object UNPLACED extends OrderStatus {
     val color: Color = Yellow100
+
     def ID: String = "UNPLACED"
 }
 

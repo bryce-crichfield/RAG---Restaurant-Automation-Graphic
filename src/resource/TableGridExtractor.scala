@@ -1,13 +1,11 @@
-package org.eleven
 package resource
 
 import javafx.scene.Node
-
-import scala.collection.mutable.ListBuffer
 import javafx.scene.control.Button
 import javafx.scene.layout.GridPane
 
 import java.util
+import scala.collection.mutable.ListBuffer
 
 object TableGridExtractor {
 
