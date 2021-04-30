@@ -10,8 +10,9 @@ object FloorManager {
     val HEIGHT = 6
 
     val tables: List[Table] = {
-        (for (id <- 1 to 36)
+        (for (id <- 1 to 50)
             yield new Table(id, new Order(ListBuffer[Item](), id))).toList
     }
+
     def getTable(tableID: Int): Table = tables(tableID);
 }
